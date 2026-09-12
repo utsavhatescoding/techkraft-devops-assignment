@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: #172033;
+    background:
+        radial-gradient(circle at top left, #dcecff 0, transparent 35%),
+        #f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: min(92%, 850px);
+    margin: 0 auto;
+    padding: 10vh 0 40px;
+}
+
+.card {
+    padding: 55px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(27, 44, 78, 0.12);
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #12824c;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background: #20bf6b;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(32, 191, 107, 0.14);
+}
+
+h1 {
+    margin: 28px 0 18px;
+    color: #12233f;
+    font-size: clamp(42px, 7vw, 70px);
+    line-height: 0.98;
+    letter-spacing: -3px;
+}
+
+.description {
+    max-width: 610px;
+    margin-bottom: 38px;
+    color: #607087;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.service {
+    padding: 18px;
+    background: #f7f9fc;
+    border: 1px solid #e7ebf1;
+    border-radius: 12px;
+}
+
+.service span,
+.counter span {
+    display: block;
+    margin-bottom: 7px;
+    color: #79869a;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.service strong {
+    font-size: 17px;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding: 18px 22px;
+    color: white;
+    background: #172f55;
+    border-radius: 12px;
+}
+
+.counter span {
+    margin: 0;
+    color: #c9d7ea;
+}
+
+.counter strong {
+    font-size: 26px;
+}
+
+footer {
+    padding-top: 22px;
+    color: #8490a2;
+    font-size: 13px;
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding-top: 4vh;
+    }
+
+    .card {
+        padding: 30px 24px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+}

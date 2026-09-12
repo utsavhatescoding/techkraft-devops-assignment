@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevOps Infrastructure</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <main class="container">
+        <section class="card">
+            <div class="status">
+                <span class="status-dot"></span>
+                SYSTEM OPERATIONAL
+            </div>
+
+            <h1>Infrastructure<br>Deployment</h1>
+
+            <p class="description">
+                A containerized web stack running behind an Nginx reverse
+                proxy with persistent PostgreSQL storage.
+            </p>
+
+            <div class="services">
+                <div class="service">
+                    <span>Reverse Proxy</span>
+                    <strong>Nginx</strong>
+                </div>
+
+                <div class="service">
+                    <span>Application</span>
+                    <strong>Flask</strong>
+                </div>
+
+                <div class="service">
+                    <span>Database</span>
+                    <strong>PostgreSQL</strong>
+                </div>
+            </div>
+
+            <div class="counter">
+                <span>Persistent visit count</span>
+                <strong>{{ visit_count }}</strong>
+            </div>
+        </section>
+
+        <footer>
+            IT Infrastructure &amp; DevOps Trainee Assignment
+        </footer>
+    </main>
+</body>
+</html>
