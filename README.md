@@ -1,6 +1,6 @@
 # IT Infrastructure and DevOps Trainee Assignment
 
-This repository contains my implementation of the TechKraft DevOps trainee assignment. I built and tested it on Ubuntu Server 24.04 ARM64 running in VirtualBox on my Apple Silicon Mac.
+This repository contains my implementation of the TechKraft DevOps trainee assignment. I built and tested it on Ubuntu Server 24.04 ARM64 running in VirtualBox on my Apple Mac M1.I use oracle virtual box as i have previously used it and find it easy to use . I have worked on linux / unix systems before . ( 2 years + ) 
 
 ## What I built
 
