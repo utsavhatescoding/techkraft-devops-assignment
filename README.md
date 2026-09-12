@@ -8,7 +8,7 @@ The project contains:
 
 * An Ubuntu user named `trainee` with sudo access
 * SSH key authentication on port 2222
-* UFW rules for ports 2222, 80 and 443
+* Firewall for ports 2222, 80 and 443
 * An Nginx reverse proxy
 * A Python Flask application
 * A PostgreSQL database with persistent storage
@@ -23,9 +23,7 @@ The project contains:
 Browser -> Nginx:80 -> Flask:5000 -> PostgreSQL
 ```
 
-Only Nginx is exposed on port 80. Flask and PostgreSQL communicate internally through Docker Compose.
 
-The Flask page contains a visit counter stored in PostgreSQL. I used this to confirm that the application could connect to the database and that the data remained available after restarting the containers.
 
 ## Project structure
 
@@ -60,7 +58,7 @@ README.md
 
 ## 1. Ubuntu user setup
 
-I created the `trainee` user and added it to the sudo group:
+I created the `trainee` user and added it to sudo group:
 
 ```bash
 sudo adduser trainee
@@ -79,7 +77,7 @@ The command returned `root`.
 
 ## 2. SSH configuration
 
-I installed and enabled OpenSSH Server:
+installed and enabled OpenSSH Server:
 
 ```bash
 sudo apt update
@@ -87,7 +85,7 @@ sudo apt install openssh-server -y
 sudo systemctl enable --now ssh
 ```
 
-I generated an Ed25519 key on my Mac:
+generated an Ed25519 key on my Mac:
 
 ```bash
 ssh-keygen -t ed25519 -f ~/.ssh/techkraft_trainee
@@ -106,9 +104,6 @@ PubkeyAuthentication yes
 
 I copied it to Ubuntu and checked the configuration:
 
-```bash
-sudo cp config/00-techkraft.conf \
-    /etc/ssh/sshd_config.d/00-techkraft.conf
 
 sudo sshd -t
 sudo systemctl restart ssh
